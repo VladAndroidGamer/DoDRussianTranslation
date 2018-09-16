@@ -1,0 +1,119 @@
+// Command Menu definition
+// 
+// Basic Format:
+//		"<Bound Key>" "<Button Text>" "<Command sent to server>"
+//
+// Or you can check for a specific class:
+//		<Class> "<BoundKey>" "<Button Text>" "<Command sent to server>"
+// Where <Class> is one of: SCOUT, SNIPER, SOLDIER, DEMOMAN, MEDIC, HWGUY, PYRO, SPY, ENGINEER
+// 
+// Or you can check for a specific map:
+//		MAP <MapName> "<BoundKey>" "<Button Text>" "<Command sent to server>"
+// Where <MapName> is the name of the map, without the ".bsp".
+//
+// Or you can check for a specific team:
+//		TEAM1 "<BoundKey>" "<Button Text>" "<Command sent to server>"
+//		TEAM2 "<BoundKey>" "<Button Text>" "<Command sent to server>"
+// TEAM3, TEAM4 work as well
+//
+// Buttons can also open up submenus, as follows:
+// {
+// 	"Some More Options",
+//	{
+//		...
+//	}
+// }
+//
+// Class can be any of the following:
+//		SCOUT, SNIPER, SOLDER, DEMOMAN, MEDIC, HWGUY, PYRO, SPY, ENGINEER
+//	Buttons prepended with a class name will only be seen if the player
+//	is that class. 
+//
+// Buttons preceded with "CUSTOM" are handled in special ways. They can only be moved
+// around or deleted.
+//
+//
+// Limitations:
+//		Maximum of 40 menus.
+//		Maximum of 100 buttons per menu.
+
+//--------------------------------------------------------
+// Everything below here is editable
+
+"1" "ПОМОЩЬ"
+{
+	CUSTOM		"1" "ИНФО. СЕРВЕРА"		"!SERVERINFO"
+	CUSTOM		"2" "ОПИСАНИЕ КАРТЫ"		"!MAPBRIEFING"
+}
+
+"2" "СМЕНИТЬ КЛАСС"	"changeclass"
+"3" "СМЕНИТЬ КОМАНДУ"	"changeteam"
+
+// Custom maps section
+
+	MAP dod_caen "4" "КАРТА DOD_CAEN"
+	{
+		"1" "'Захватите те флаги'"		"say_team Capture those flags"
+		"2" "'Бомбы под их танками'"		"say_team Bomb their tanks"
+		"3" "'Я иду захватывать..."
+		{
+			"1" "зону союзников'"			"say_team I'm going to capture the Allies Spawn!"
+			"2" "площадь союзников'"			"say_team I'm going to capture the Allies Plaza!"
+			"3" "двор союзников'"		"say_team I'm going to capture the Allies Courtyard!"
+			"4" "двор фашистов'"		"say_team I'm going to capture the Axis Courtyard!"
+			"5" "площадь фашистов'"			"say_team I'm going to capture the Axis Plaza!"	
+			"5" "зону фашистов'"			"say_team I'm going to capture the Axis Spawn!"	
+		}
+		"4" "'Нужно защитить..."
+		{
+			"1" "зону союзников'"			"say_team We need defense at the Allies Spawn!"
+			"2" "площадь союзников'"			"say_team We need defense at the Allies Plaza!"
+			"3" "двор союзников'"		"say_team We need defense at the Allies Courtyard!"
+			"4" "двор фашистов'"		"say_team We need defense at the Axis Courtyard!"
+			"5" "площадь фашистов'"			"say_team We need defense at the Axis Plaza!"	
+			"5" "зону фашистов'"			"say_team We need defense at the Axis Spawn!"	
+		}
+	}
+
+"5" "ГОЛОСОВЫЕ СООБЩ. 1"
+{
+	"1" 	"'Выдвигаемся'"		"voice_attack"
+	"2"	"'Отступаем'"		"voice_fallback"
+	"3"	"'Покрывающий огонь'"	"voice_cover"
+	"4" 	"'Нужна помощь'"	"voice_backup"
+	"5" 	"'Займите позицию'"	"voice_hold"
+}
+
+"6" "ГОЛОСОВЫЕ СООБЩ. 2"
+{
+	"1" "'Да сэр!'"		"voice_yessir"
+	"2" "'Слева!'"			"voice_left"
+	"3" "'Справа!'"			"voice_right"
+	"4" "'Нужны патроны'"		"voice_needammo"
+	"5" "'Снайпер!'"			"voice_sniper"
+	"6" "'Граната!'"		"voice_grenade"
+}
+
+"7" "СИГНАЛЫ РУКОЙ 1"
+{
+	"1" "'Держимся вместе'"		"signal_sticktogether"
+	"2" "'Отступаем'"		"signal_fallback"
+	"3" "'Нет сэр'"			"signal_no"
+	"4" "'Да сэр'"			"signal_yes"
+	"5" "'Снайпер!'"			"signal_sniper"
+	"6" "'Нужна помощь'"		"signal_backup"
+	"7" "'Справа'"			"signal_enemyright"
+	"8" "'Слева'"			"signal_enemyleft"
+}
+
+"8" "СИГНАЛЫ РУКОЙ 2"
+{
+	"1" "'Левый фланг'"		"signal_flankleft"
+	"2" "'Правый фланг'"		"signal_flankright"
+	"3" "'Выдвигаемся'"		"signal_moveout"
+	"4" "'Сектор чист'"		"signal_areaclear"
+	"5" "'Покрывающий огонь'"		"signal_coveringfire"
+	"6" "'Займи позицию'"		"signal_holdposition"
+	"7" "'Враг впереди'"		"signal_enemyspotted"
+	"8" "'Граната!'"		"signal_grenade"
+}
