@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Day of Defeat MOTD</title>
+<style>
+    body{
+        background: #000;
+        margin: 8px;
+        color:#FFB000;
+        font: normal 10pt Verdana, Tahoma, sans-serif;
+    }
+ 
+    a {
+        color: #655521;
+        text-decoration: underline;
+    }
+ 
+    a:hover {
+        color: #655521;
+        text-decoration: none;
+    }
+ 
+    h3 {
+        margin:0;
+        font-size: 16pt;
+    }
+ 
+    body p {
+        line-height: 1.2;
+        font-weight:700;
+    }
+ 
+    .white {color:#fff}
+</style>
+</head>
+<body>
+<h3 class="white">Day of Defeat</h3>
+<p> Добро пожаловать в <i> Day of Defeat </ i>.
+<i> Day of Defeat </ i> - это многопользовательская игра Второй мировой войны, основанная на движке Half-Life. DoD пытается воссоздать битвы Второй мировой войны как в вымышленной, так и в
+невымышленной среде - игра ставит вас в тупик (скорее, сражаясь
+в ботинки!) британского, американского или немецкого солдата около 1944 года, Западной Европы. </ p>
+<p class = "white"> Вы можете посетить официальный сайт DoD по адресу: <a href="http://www.dayofdefeat.net/"> http://www.dayofdefeat.net/</a></p>
+</body>
+</html>
