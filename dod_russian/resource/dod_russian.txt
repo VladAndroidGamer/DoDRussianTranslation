@@ -722,12 +722,7 @@
 
 //CHARLIE
 
-"CHARLIE_ALLIEDBRIEFING"	"Move up the beach under a storm of lead to destroy 
-the barbed-wire barrier.
-Then up on the bluff, use your satchel charges to destroy
-the two 88 gun emplacements.  
-Also use satchels to also destroy a radio transmitter and a 
-large coastal gun."
+"CHARLIE_ALLIEDBRIEFING"	"Поднимитесь на берег под штормом свинца, чтобы разрушить барьер из колючей проволоки. Затем на блеф, используйте свои заряды для зарядки, чтобы уничтожить два 88 огневых пункта. Также используйте ранец для уничтожения радиопередатчика и большой береговой пушки."
 
 "CHARLIE_AXISBRIEFING"		"Защитите Атлантическую стену против союзных захватчиков и
 не позволяйте союзникам двигаться дальше вглубь страны!
